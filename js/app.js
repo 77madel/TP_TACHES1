@@ -58,7 +58,7 @@ const loadTodos = (filter, filteredTodos) => {
     // S'il n'y a pas de tâches, affichez un message de liste vide.
     const emptyListString = filter
       ? `Pas des taches ${filter} !`
-      : `Pas de taches disponobles!`;
+      : `Pas de taches disponibles!`;
     todoList.innerHTML = `<p style="text-align:center;">${emptyListString}</p>`;
   } else {
     // Si la liste n'est pas vide, parcourez chaque tâche.
