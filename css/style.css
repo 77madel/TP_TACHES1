@@ -4,11 +4,13 @@ html,
 body {
   width: 100%;
   height: 100%;
+  margin: 0;
+  padding: 0;
 }
 /* Arrière-plan avec une image centrée et redimensionnée pour couvrir toute la page */
 body {
   font-family: "Poppins", sans-serif;
-  background: url("/img/odc.jpeg") no-repeat center/cover;
+  background: url("img/odc.jpeg") no-repeat center/cover;
   background-size: auto;
 }
 
@@ -43,7 +45,7 @@ button.active:hover {
 }
 
 main {
-  width: 100%;
+  /* width: 100%; */
   padding: 40px 16px;
   display: flex;
   justify-content: center;
