@@ -11,9 +11,7 @@ body {
   background: url("/img/odc.jpeg") no-repeat center/cover;
   background-size: auto;
 }
-/* .img-hmb img{
-display: none;
-} */
+
 /* Styles pour les boutons */
 button{
     cursor: pointer;
@@ -46,13 +44,13 @@ button.active:hover {
 
 main {
   width: 100%;
-  margin: 50px auto ;
-  /* padding: ; */
+  padding: 40px 16px;
   display: flex;
   justify-content: center;
 }
+
 /* Styles pour la mise en page de la todo list */
-.todos, nav{
+.todos {
   display: grid;
   grid-template-areas: "todos-nav add-todo-form" "todos-nav todos-list";
   grid-template-columns: min-content 1fr;
@@ -175,14 +173,13 @@ main {
 }
 #todos-list li.complete .todo-btn {
   color: green;
-
+  
 }
 
 /* Media query pour les ajustements de mise en page sur les écrans plus larges */
-@media(max-width: 810px) {
+/* @media screen and (min-width: 370px) {
   #add-todo-form {
     flex-wrap: nowrap;
-    flex-direction: column;
   }
   #add-todo-form input[type=text] {
     flex-basis: inherit;
@@ -190,37 +187,22 @@ main {
   #add-todo-form input[type=date] {
     flex: inherit;
   }
-  #todos-nav{
-    display: none;
-  }
- 
-main {
-  width: 100%;
-  margin: 10px auto ;
+} */
 
+/* Media query for adjustments on smaller screens */
+@media screen and (max-width: 600px) {
+  .todos {
+    grid-template-areas:
+      "todos-nav"
+      "add-todo-form"
+      "todos-list";
+    grid-template-columns: 1fr;
+  }
 }
-  .img-hmb img{
-    width: 50px;
-    height: 50px;
-    /* position: absolute; */
-    /* margin-right: -30px; */
-  }
-  body{
-    background: #FFF;
-    background: fixed;
-    margin: 0;
-    padding: 0;
-    
-  }
 
-  .todos{
-    display: grid;
-    width: 80%;
+/* Media query for adjustments on larger screens */
+@media screen and (min-width: 1024px) {
+  .todos {
+    grid-template-columns: min-content 1fr;
   }
-
-  #add-todo-form input{
-    padding: 10px 10px;
-    margin-bottom: 10px;
-  }
-  
 }
