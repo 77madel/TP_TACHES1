@@ -10,7 +10,7 @@ body {
 /* Arrière-plan avec une image centrée et redimensionnée pour couvrir toute la page */
 body {
   font-family: "Poppins", sans-serif;
-  background: url("img/odc.jpeg") no-repeat center/cover;
+  background: url("odc.jpeg") no-repeat center/cover;
   background-size: auto;
 }
 
