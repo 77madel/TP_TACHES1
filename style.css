@@ -14,6 +14,8 @@ body {
   background-size: auto;
 }
 
+
+
 /* Styles pour les boutons */
 button{
     cursor: pointer;
@@ -49,6 +51,10 @@ main {
   padding: 40px 16px;
   display: flex;
   justify-content: center;
+}
+.titre{
+  
+  text-align: center;
 }
 
 /* Styles pour la mise en page de la todo list */
