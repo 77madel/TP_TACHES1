@@ -3,47 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <title>TP TACHES</title>
 </head>
 <body>
-    <div class="img-hmb">
-    <img src="/img/hmb.jpg" id="toggle-img" alt="">
-</div>
-<nav id='todos-nav'>
-    <button data-filter="tout" class="active">
-        <img src="" alt="">Tout
-    </button>
-    <button data-filter="aujourdhui">
-        <img src="" alt="">Aujourd'hui
-    </button>
-    <button data-filter="enretard">
-        <img src="" alt="">En retard
-    </button>
-    <button data-filter="programmer">
-        <img src="" alt="">Programmer
-    </button>
-    <button data-filter="enattend">
-        <img src="" alt="">En attend
-    </button>
-    <button data-filter="complete">
-        <img src="" alt="">Complete
-    </button>
-</nav>
     <main>
         <div class="todos">
             <!-- <header>
                 <h1>TITRE</h1>
                 <img src="" alt="">
             </header> -->
-           
+            <nav id='todos-nav'>
+                <button data-filter="tout" class="active">
+                    <img src="" alt="">Tout
+                </button>
+                <button data-filter="aujourdhui">
+                    <img src="" alt="">Aujourd'hui
+                </button>
+                <button data-filter="enretard">
+                    <img src="" alt="">En retard
+                </button>
+                <button data-filter="programmer">
+                    <img src="" alt="">Programmer
+                </button>
+                <button data-filter="enattend">
+                    <img src="" alt="">En attend
+                </button>
+                <button data-filter="complete">
+                    <img src="" alt="">Complete
+                </button>
+            </nav>
 
             <form id="add-todo-form">
-                <input type="text" name="todo-text" id="todo-text" placeholder="Todo...." required>
+                <input type="text" name="todo-text" id="todo-text" placeholder="Nouvelle Taches...." required>
                 <input type="date" name="todo-date" id="todo-date" required>
                 <!-- <input type="text"> -->
-                <button id="add-todo-btn" class="active" type="submit">Add</button>
+                <button id="add-todo-btn" class="active" type="submit">Ajouter</button>
             </form>
     
             <ul id="todos-list">
@@ -51,15 +47,7 @@
             </ul>
         </div>
     </main>
-<script>
-    let navContent = document.querySelector('#todos-nav');
-    let iconClick = document.querySelector('#toggle-img');
-    iconClick.addEventListener("click",function(){
-        // alert('BONJOUR');
-        navContent.style.display = "block";
 
-    });
-</script>
     <script src="/js/app.js"></script>
 </body>
 </html>
