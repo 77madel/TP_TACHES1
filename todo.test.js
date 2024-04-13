@@ -66,7 +66,7 @@ test('Test de la fonction loadTodos', () => {
   ];
 
   // Appelez la fonction à tester avec les données de tâches simulées
-  loadTodos(mockTodos);
+  loadTodos(null, mockTodos);
 
   // Vérifiez si les tâches ont été correctement chargées dans le DOM
   const todoList = document.getElementById('todos-list');

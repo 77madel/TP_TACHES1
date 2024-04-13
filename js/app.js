@@ -1,5 +1,5 @@
 /* elements et variables global  */
-const addTodoBtn = document.getElementById('add-todo-btn');
+const addTodoBtn = document.querySelector('#add-todo-btn');
 const todosNav = document.getElementById('todos-nav');
 let todoListArray = [];
 let todosFilter = 'tout';
@@ -11,7 +11,16 @@ const saveTodos = () => {
   localStorage.setItem('todoList', todoListJson);
 };
 
-const getTodos = () => JSON.parse(localStorage.getItem('todoList')) || [];
+const getTodos = () => {
+  const todoListJson = localStorage.getItem('todoList');
+  return todoListJson ? JSON.parse(todoListJson) : [];
+};
+
+
+// module.exports = {
+//   saveTodos,
+//   getTodos
+// };
 
 // Ajouter une nouvelle taches
 addTodoBtn.addEventListener('click', (event) => {
@@ -74,7 +83,15 @@ const loadTodos = (filter, filteredTodos) => {
       todoList.appendChild(todoItem);
     });
   }
+  // // Exportez la fonction loadTodos
+  // module.exports = {
+  //   loadTodos
+  // };
+  console.log(loadTodos);
+
 };
+
+
 
 // Trier les tâches par date.
 const sortTodos = (filteredTodos) => {
@@ -94,6 +111,7 @@ const sortTodos = (filteredTodos) => {
 
   return todoList;
 };
+
 
 //   Créez l'élément Todo.
 const createTodoElement = (todo) => {
@@ -115,6 +133,11 @@ const createTodoElement = (todo) => {
     <button style="color:red"; class="delete-btn"><i class="fa-solid fa-trash"></i></button>
   `;
 };
+
+  // // Exporter la fonction createTodoElement
+  // module.exports = {
+  //   createTodoElement
+  // };
 
  /* Gestion des tâches */
 // Vérifiez l'état Todo ou supprimez le clic button.
