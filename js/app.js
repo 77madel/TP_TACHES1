@@ -187,6 +187,10 @@ const deleteTodo = (todoItem) => {
   loadTodos(todosFilter, todos);
 };
 
+  module.exports = {
+   deleteTodo
+   };
+
  /* filtrer les tâches */
 todosNav.addEventListener('click', (event) => {
   const navButtons = todosNav.querySelectorAll('button');

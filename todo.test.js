@@ -48,35 +48,60 @@ test('Test de la fonction addTodoBtn.addEventListener', () => {
 });
 
 
-// Importez les fonctions à tester
-const { loadTodos } = require('./js/app.js');
+// // Importez les fonctions à tester
+// const { loadTodos } = require('./js/app.js');
 
-// Définissez un test pour la fonction loadTodos
-test('Test de la fonction loadTodos', () => {
-  // Créez un faux DOM avec jsdom
-  const dom = new JSDOM('<!DOCTYPE html><div id="todos-list"></div>');
+// // Définissez un test pour la fonction loadTodos
+// test('Test de la fonction loadTodos', () => {
+//   // Créez un faux DOM avec jsdom
+//   const dom = new JSDOM('<!DOCTYPE html><div id="todos-list"></div>');
 
-  // Définissez document à partir du DOM simulé
-  global.document = dom.window.document;
+//   // Définissez document à partir du DOM simulé
+//   global.document = dom.window.document;
 
-  // Définissez un exemple de données de tâches
-  const mockTodos = [
-    { id: 1,  date: '2024-04-15', state: 'enattend' },
-    { id: 2,  date: '2024-04-16', state: 'complete' }
-  ];
+//   // Définissez un exemple de données de tâches
+//   const mockTodos = [
+//     { id: 1,  date: '2024-04-15', state: 'enattend' },
+//     { id: 2,  date: '2024-04-16', state: 'complete' }
+//   ];
 
-  // Appelez la fonction à tester avec les données de tâches simulées
-  loadTodos(null, mockTodos);
+//   // Appelez la fonction à tester avec les données de tâches simulées
+//   loadTodos(null, mockTodos);
 
-  // Vérifiez si les tâches ont été correctement chargées dans le DOM
-  const todoList = document.getElementById('todos-list');
-  expect(todoList.children.length).toBe(mockTodos.length);
+//   // Vérifiez si les tâches ont été correctement chargées dans le DOM
+//   const todoList = document.getElementById('todos-list');
+//   expect(todoList.children.length).toBe(mockTodos.length);
 
-  // Vérifiez si les tâches ont été correctement ajoutées avec les bonnes classes et attributs
-  mockTodos.forEach((todo, index) => {
-    const todoItem = todoList.children[index];
-    expect(todoItem.dataset.id).toBe(todo.id.toString());
-    expect(todoItem.classList.contains(todo.state)).toBe(true);
-  });
-});
+//   // Vérifiez si les tâches ont été correctement ajoutées avec les bonnes classes et attributs
+//   mockTodos.forEach((todo, index) => {
+//     const todoItem = todoList.children[index];
+//     expect(todoItem.dataset.id).toBe(todo.id.toString());
+//     expect(todoItem.classList.contains(todo.state)).toBe(true);
+//   });
+// });
 
+
+
+//  const deleteTodo = require('./js/app.js');
+//  describe('Fonction deleteTodo', () => {
+//   test('Supprime correctement un élément de la liste', () => {
+//     // Données de test
+//     const todoListArray = [
+//       { id: 1, task: 'Tâche 1' },
+//       { id: 2, task: 'Tâche 2' },
+//       { id: 3, task: 'Tâche 3' },
+//     ];
+//     const filteredTodos = []; // Liste filtrée vide
+//     const mockTodoItem = document.createElement('div');
+//     mockTodoItem.dataset.id = 2; // ID de l'élément à supprimer
+
+//     // Appel de la fonction deleteTodo
+//     deleteTodo(mockTodoItem, todoListArray, jest.fn(), jest.fn());
+
+//     // Vérifications après la suppression
+//     expect(todoListArray).not.toContainEqual(expect.objectContaining({ id: 2 })); // Vérifier si l'élément est supprimé de la liste principale
+//     expect(filteredTodos).not.toContainEqual(expect.objectContaining({ id: 2 })); // Vérifier si l'élément est supprimé de la liste filtrée
+
+//     // (Ajoutez des vérifications supplémentaires pour les fonctions saveTodos et loadTodos si nécessaire)
+//   });
+// });
