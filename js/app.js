@@ -116,8 +116,7 @@ const sortTodos = (filteredTodos) => {
 //   Créez l'élément Todo.
 const createTodoElement = (todo) => {
   const aujourdhui = new Date().setHours(0, 0, 0, 0);
-  const enretard =
-    dateStringToDate(formatDate(todo.date)) < aujourdhui && todo.state === 'enattend';
+  const enretard = dateStringToDate(formatDate(todo.date)) < aujourdhui && todo.state === 'enattend';
   const todoDateClass = enretard ? 'todo-date enretard' : 'todo-date';
   const todoButtonIconClass =
     todo.state === 'enattend' ? 'fa-circle' : 'fa-circle-check';
