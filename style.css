@@ -14,8 +14,6 @@ body {
   background-size: auto;
 }
 
-
-
 /* Styles pour les boutons */
 button{
     cursor: pointer;
@@ -52,10 +50,6 @@ main {
   display: flex;
   justify-content: center;
 }
-.titre{
-  
-  text-align: center;
-}
 
 /* Styles pour la mise en page de la todo list */
 .todos {
@@ -73,6 +67,12 @@ main {
   border-radius: 16px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
+
+.titre{
+  display: contents;
+  box-sizing: initial;
+}
+
 /* Styles pour la section de navigation des tâches */
 .todos #todos-nav {
   grid-area: todos-nav;
