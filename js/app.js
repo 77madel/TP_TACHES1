@@ -129,7 +129,7 @@ const createTodoElement = (todo) => {
         <span class="${todoDateClass}">${formatDate(todo.date)}</span>
       </div>
     </div>
-    <button style="color:red"; class="delete-btn"><i class="fa-solid fa-trash"></i></button>
+    <button style="color:red" class="delete-btn"><i class="fa-solid fa-trash"></i></button>
   `;
 };
 
