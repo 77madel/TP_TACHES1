@@ -9,7 +9,7 @@ const html = fs.readFileSync(path.resolve(__dirname, './index.html'), 'utf8');
 const dom = new JSDOM(html);
 
 // Extraire window et document de l'instance JSDOM
-global.window = dom.window;
+
 global.document = dom.window.document;
 
 
